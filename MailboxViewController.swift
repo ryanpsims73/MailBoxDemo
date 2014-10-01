@@ -11,6 +11,9 @@ import UIKit
 class MailboxViewController: UIViewController {
 
     @IBOutlet weak var mailBoxView: UIView!
+    @IBOutlet weak var archiveView: UIScrollView!
+    @IBOutlet weak var rescheduleView: UIScrollView!
+    
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var navImage: UIImageView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -65,7 +68,36 @@ class MailboxViewController: UIViewController {
                 self.feedImage.image!.size.height +
                 self.navImage.image!.size.height
                 )
+            )
+        // setup pseudo views triggered through the
+        // segmented controller
+        // archive view of mailbox
+        self.archiveView.frame.origin.x = 320
+        self.archiveView.frame.origin.y = 65
+        self.archiveView.contentSize =
+            CGSize(
+                width: 320,
+                height: (
+                    self.searchBoxImage.image!.size.height +
+                    self.bannerImage.image!.size.height +
+                    self.feedImage.image!.size.height +
+                    self.navImage.image!.size.height
+                )
+            )
+        // reschedule view of mailbox
+        self.rescheduleView.frame.origin.x = -320
+        self.rescheduleView.frame.origin.y = 65
+        self.rescheduleView.contentSize =
+            CGSize(
+                width: 320,
+                height: (
+                    self.searchBoxImage.image!.size.height +
+                        self.bannerImage.image!.size.height +
+                        self.feedImage.image!.size.height +
+                        self.navImage.image!.size.height
+                )
         )
+        
 
         // Setup mailbox view
         self.rightIconView.alpha = 0
@@ -280,14 +312,42 @@ class MailboxViewController: UIViewController {
             // change color
             self.segmentedControl.tintColor = UIColor(red: 249/255, green: 204/255, blue: 40/255, alpha: 1.0)
             // animate panel change
+            self.rescheduleView.alpha = 1
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.rescheduleView.frame.origin.x = 0
+                self.scrollView.frame.origin.x = 320
+                self.archiveView.frame.origin.x = 640
+                }) { (finished: Bool) -> Void in
+                    self.scrollView.alpha = 0
+                    self.archiveView.alpha = 0
+            }
         case 1:
             // change color
             self.segmentedControl.tintColor = UIColor(red: 112/255, green: 197/255, blue: 224/255, alpha: 1.0)
             // animate panel change
+            self.scrollView.alpha = 1
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                    self.rescheduleView.frame.origin.x = -320
+                    self.scrollView.frame.origin.x = 0
+                    self.archiveView.frame.origin.x = 320
+                }) { (finished: Bool) -> Void in
+                    self.archiveView.alpha = 0
+                    self.rescheduleView.alpha = 0
+            }
         case 2:
             // change color
             self.segmentedControl.tintColor = UIColor(red: 98/255, green: 213/255, blue: 80/255, alpha: 1.0)
             // animate panel change
+            self.archiveView.alpha = 1
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.rescheduleView.frame.origin.x = -640
+                    self.scrollView.frame.origin.x = -320
+                    self.archiveView.frame.origin.x = 0
+                }) { (finished: Bool) -> Void in
+                    self.scrollView.alpha = 0
+                    self.rescheduleView.alpha = 0
+            }
+            
         default:
             break; 
         }

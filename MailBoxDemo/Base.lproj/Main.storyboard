@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="YEq-Hm-le5" customClass="MailboxViewController" customModule="MailBoxDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NBv-nE-ttq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu" id="T4p-PE-vvd">
@@ -17,12 +17,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="cVI-C0-ZvE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="2000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="640" height="2000"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="21x-bm-VgU">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="565"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="565"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav" id="jv9-1t-ueF">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
@@ -66,7 +66,7 @@
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="i2S-Ak-j8g">
                                         <rect key="frame" x="0.0" y="65" width="320" height="2000"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_label" id="saU-ZE-PjW">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
@@ -150,6 +150,42 @@
                                             </button>
                                         </subviews>
                                     </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Bv9-1r-SST">
+                                        <rect key="frame" x="320" y="65" width="320" height="2000"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_label" id="kWO-Te-fYb">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" id="hry-5f-gT6">
+                                                <rect key="frame" x="0.0" y="37" width="320" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="GMi-IM-Bbz">
+                                                <rect key="frame" x="0.0" y="79" width="320" height="1202"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zag-ir-cl8">
+                                        <rect key="frame" x="480" y="65" width="320" height="2000"/>
+                                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_label" id="bkq-yb-KY0">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" id="HE9-7X-ua5">
+                                                <rect key="frame" x="0.0" y="37" width="320" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" id="OPc-H2-doE">
+                                                <rect key="frame" x="0.0" y="79" width="320" height="1202"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -158,6 +194,13 @@
                                 <rect key="frame" x="0.0" y="1300" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zzp-es-kGp">
+                                        <rect key="frame" x="135" y="259" width="50" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <navigationBar contentMode="scaleToFill" id="yhw-go-RLG">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -173,6 +216,15 @@
                                                         <connections>
                                                             <action selector="composeCancelButtonTap:" destination="YEq-Hm-le5" eventType="touchUpInside" id="aeN-iM-pTa"/>
                                                         </connections>
+                                                    </button>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" style="plain" id="qNi-A3-bqq">
+                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vJq-xv-GHF">
+                                                        <rect key="frame" x="233" y="7" width="50" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Send">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
                                                     </button>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -214,10 +266,11 @@
                         <gestureRecognizers/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="2000"/>
+                    <size key="freeformSize" width="640" height="2000"/>
                     <connections>
                         <outlet property="actionsView" destination="S5i-hE-pSx" id="sxx-mE-NEX"/>
                         <outlet property="archiveIconImage" destination="hb1-3E-ztv" id="1XB-Kd-JQf"/>
+                        <outlet property="archiveView" destination="Bv9-1r-SST" id="647-zN-6Si"/>
                         <outlet property="bannerImage" destination="saU-ZE-PjW" id="Joy-OW-7Z6"/>
                         <outlet property="composeFormEmailText" destination="7wk-E9-599" id="fsX-zb-lTW"/>
                         <outlet property="composeFormImage" destination="XXP-oJ-dyO" id="JCf-fJ-j6G"/>
@@ -235,6 +288,7 @@
                         <outlet property="modalMenuView" destination="9Us-g6-taB" id="oTl-0h-Ovq"/>
                         <outlet property="navImage" destination="jv9-1t-ueF" id="vGW-66-gns"/>
                         <outlet property="rescheduleMenuImage" destination="vJp-xi-mrQ" id="xgQ-EA-hPp"/>
+                        <outlet property="rescheduleView" destination="zag-ir-cl8" id="0QF-Ab-Rex"/>
                         <outlet property="rightIconView" destination="iEi-Fi-u6l" id="Qo6-i1-dBf"/>
                         <outlet property="scrollView" destination="i2S-Ak-j8g" id="IZ0-Es-CHF"/>
                         <outlet property="searchBoxImage" destination="8aJ-ci-9Ls" id="j0G-Cr-IdS"/>
