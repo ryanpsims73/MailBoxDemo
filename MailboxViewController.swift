@@ -175,6 +175,7 @@ class MailboxViewController: UIViewController {
             if (translation.x > showReschedulePoint && translation.x < 0) {
                 // swipe left to 60
                 // do nothing
+                self.laterIconImage.alpha = (translation.x/showReschedulePoint)
             }
             else if (translation.x <= showReschedulePoint && translation.x > showListPoint) {
                 // swipe left between 60 and 260
@@ -202,7 +203,10 @@ class MailboxViewController: UIViewController {
             }
             
             // swiping right
-            if (translation.x >= archivePoint && translation.x <= deletePoint) {
+            if (translation.x < archivePoint && translation.x > 0) {
+                self.archiveIconImage.alpha = (translation.x/archivePoint)
+            }
+            else if (translation.x >= archivePoint && translation.x <= deletePoint) {
                 // swipe past 60
                 // show check icon and move
                 self.leftIconView.frame.origin.x = translation.x + leftIconViewOrigin.x - abs(archivePoint)
